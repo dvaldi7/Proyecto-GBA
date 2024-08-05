@@ -1,7 +1,8 @@
-@media (max-width: 649px){
-    .logo{
-        text-align: center;
- 
-    }
+@media (max-width: 655px){
+   
+   .menu ul li{
+        font-size: 12px;
+       
+   }
 
 }
