@@ -1,8 +1,22 @@
-@media (max-width: 655px){
+@media (max-width: 800px){
    
-   .menu ul li{
+   .list ul li{
         font-size: 12px;
        
+   }
+   .banner{
+    height: 10%;
+    margin: 0px auto;
+    padding: auto;
+   }
+   
+   .banner h1{
+    font-size: 22px;
+   }
+
+   #header .button{
+    display: block;
+    float: right;
    }
 
 }
