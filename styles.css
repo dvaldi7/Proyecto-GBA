@@ -3,13 +3,14 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 /* ESTILOS DEL HEADER */
 
 #header{
     width: 100%;
-    height: 120px;
+    height: 145px;
     color: black;
     display: flex;
     flex-flow: row wrap;
@@ -17,8 +18,8 @@
     align-items: center;
     background-color: rgba(238, 12, 12, 0.8); 
     /*position: fixed; */
-    padding: 1em;
-   
+    padding-left: 20px;
+    
 }
 
 
@@ -38,7 +39,7 @@
 }
 
 .list ul{
-    padding-bottom: 50px;
+    padding-bottom: 20px;
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
@@ -80,24 +81,39 @@
     height: 2em;
 }
 
+/* ESTILOS DEL MAIN */
+
+/*
+#main{
+        background-image: url(images/jiujitsu\ para\ todos.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 1000px;
+    }
+  */  
+
+  #main{
+    background-color: black;
+    height: 1000px;
+  }
 /* ESTILOS DEL BANNER */
 #info{
-    display: grid;
+    display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    flex-flow: column wrap;
 }
 
 .banner{
-    
+    width: 90%;
     height: 20vh;
-    border: 2px solid black;
-    font-size: 50px;
-    margin: 25px auto;
+    font-size: 30px;
     font-weight: bolder;
-    text-shadow: 2px 2px 1px rgb(250, 250, 250);
-    color: black;
-    justify-items: center;
-    align-items: center;
+    color: white;
+    text-align: center;
+    text-shadow: 0px 0px 5px red, 0px 0px 5px red;
+    
     
 }
     

@@ -10,7 +10,7 @@
    }
    
    .banner h1{
-    font-size: 22px;
+    font-size: 30px;
    }
 
    #header .button{
@@ -36,5 +36,6 @@
     width: 60px;
     height:40px;
    }
+
 
 }
