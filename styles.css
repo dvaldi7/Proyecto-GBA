@@ -75,6 +75,11 @@
     display: none;
 }
 
+.button-list{
+    width: 2em;
+    height: 2em;
+}
+
 /* ESTILOS DEL BANNER */
 #info{
     display: grid;
