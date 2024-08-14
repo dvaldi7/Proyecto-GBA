@@ -95,6 +95,7 @@
 
   #main{
     background-color: black;
+    background: -webkit-linear-gradient(80deg, rgba(2, 2, 2, 0.705) 10%, black 90%);
     height: 1000px;
   }
 /* ESTILOS DEL BANNER */
