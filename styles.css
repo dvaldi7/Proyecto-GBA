@@ -3,7 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
-    
+
 }
 
 /* ESTILOS DEL HEADER */
@@ -33,9 +33,11 @@
 
 .logo{
     width: 10%;
+    
 }
 .list{
     width: 85%;
+    
 }
 
 .list ul{
@@ -57,12 +59,14 @@
     margin-left: 10px;
     font-weight: bolder;
     margin-bottom: 25px;
+    
 }
 
 .list a{
     text-decoration: none;
     color:black;
     text-shadow:  0px 1px 1px #f7a3a3;
+    
 }
 
 .list a:hover{
@@ -74,11 +78,13 @@
 
 .button{
     display: none;
+    
 }
 
 .button-list{
     width: 2em;
     height: 2em;
+    
 }
 
 /* ESTILOS DEL MAIN */
@@ -94,38 +100,50 @@
   */  
 
   #main{
+    display: flex;
+    align-items: center;
+    
     background-color: black;
     background: -webkit-linear-gradient(80deg, rgba(2, 2, 2, 0.705) 10%, black 90%);
+    background-color: blue;
+    display: flex;
+    flex-flow: column;
     height: 1000px;
   }
 /* ESTILOS DEL BANNER */
-#info{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column wrap;
-}
 
 .banner{
-    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
     height: 20vh;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bolder;
-    color: white;
+    color: black;
     text-align: center;
     text-shadow: 0px 0px 5px red, 0px 0px 5px red;
-    
-    
+    border: 3px solid red;
 }
     
 .banner h1{
     padding: 30px 30px;
-    
-    
+    background-color: blue;
+    height: 100px;
+       
 }
-
-
 
 .slider{
-    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    color: black;
+    background-color: green;
+    margin-top: 100px; 
+    text-align: center;
+    height: 100px;
+    border: 3px solid red;
 }
+
