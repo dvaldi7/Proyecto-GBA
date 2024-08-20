@@ -17,7 +17,11 @@
     justify-content: space-between;
     align-items: center;
     background-color: rgba(238, 12, 12, 0.8); 
-    /*position: fixed; */
+    position: fixed; 
+    z-index: 10;
+    top: 0;
+    
+    
     padding-left: 20px;
     
 }
@@ -87,28 +91,23 @@
     
 }
 
-/* ESTILOS DEL MAIN */
+.dropdown{
+    display: none;
+}
 
-/*
-#main{
-        background-image: url(images/jiujitsu\ para\ todos.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 1000px;
-    }
-  */  
+/* ESTILOS DEL MAIN */
 
   #main{
     display: flex;
     align-items: center;
-    
     background-color: black;
     background: -webkit-linear-gradient(80deg, rgba(2, 2, 2, 0.705) 10%, black 90%);
     background-color: blue;
     display: flex;
     flex-flow: column;
     height: 1000px;
+
+    padding-top: 160px;
   }
 /* ESTILOS DEL BANNER */
 
