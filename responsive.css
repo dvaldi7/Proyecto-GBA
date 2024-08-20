@@ -1,7 +1,9 @@
 @media (max-width: 730px){
     #header{
-        display: relative;
-        
+        display: relative;   
+    }
+    #header img{
+        margin-top: 11px;
     }
 
     #header .list{
@@ -29,7 +31,6 @@
     cursor: pointer;
     border: none;
     color: black;
-    
    }
 
    #header .button:hover{
@@ -43,13 +44,13 @@
 
    #header .dropdown{
     display: flex;
-    width: 400px;
-    height: 150px;
-
-
-    z-index: 10;
+    flex-flow: column wrap;
+    width: 100%;
+    min-height: 200px;
+    z-index: 20;
     background-color: orange;
     border: 3px solid yellow;
+    margin-top: 21px;
    }
 
 }
