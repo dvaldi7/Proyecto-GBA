@@ -1,5 +1,12 @@
 @media (max-width: 730px){
+
+    #header{
+        height: 90px;
+    }
+
     #header img{
+        height: 70px;
+        width: 70px;
         margin-top: 11px;
     }
 
