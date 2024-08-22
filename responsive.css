@@ -1,12 +1,6 @@
 @media (max-width: 730px){
-
-    #header{
-        height: 90px;
-    }
-
+    
     #header img{
-        height: 70px;
-        width: 70px;
         margin-top: 11px;
     }
 
@@ -26,8 +20,7 @@
    #header .button{
         display: block;
         float: right;
-        margin-right: 20px;
-        margin-bottom: 25px;
+        margin-right: 30px;
         width: 50px;
         height: 50px;
         /*box-shadow: 0px 0px 3px blue, 0px 0px 3px black;*/
@@ -35,6 +28,7 @@
         cursor: pointer;
         border: none;
         color: black;
+
    }
 
    #header .button:hover{
