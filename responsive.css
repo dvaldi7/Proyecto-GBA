@@ -39,28 +39,32 @@
         height:40px;
    }
 
-   #header .dropdown{
-        display: flex;
+   #header .nav{
+        display: none;
         flex-flow: column wrap;
         width: 100%;
         min-height: 200px;
         z-index: 20;
-        background-color: orange;
+        background-color: rgb(175, 162, 175);
         border: 3px solid yellow;
-        margin-top: 21px;
+        margin-top: 11px;
         justify-content: center;
         align-items: center;
         margin-left: -10px;
    }
 
-    .dropdown ul{
+   #header .nav.activo{
+        display: flex;
+   }
+
+    .nav ul{
         display: flex;
         flex-flow: column wrap;
         list-style: none;
         row-gap: 25px;
    }
 
-   .dropdown a{
+   .nav a{
         text-decoration: none;
         color: white;
         font-size: 20px;
