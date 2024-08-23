@@ -43,15 +43,14 @@
    #header .nav{
         display: none;
         flex-flow: column wrap;
-        width: 100%;
+        width: 105%;
         min-height: 200px;
         z-index: 20;
-        background-color: rgb(175, 162, 175);
-        border: 3px solid yellow;
-        margin-top: 11px;
+        background-color: rgb(226, 224, 224);
+        margin-top: 2px;
         justify-content: center;
         align-items: center;
-        margin-left: -10px;
+        margin-left: -20px;
    }
 
    #header .nav.activo{
@@ -63,15 +62,16 @@
         flex-flow: column wrap;
         list-style: none;
         row-gap: 25px;
+        
    }
 
    .nav a{
         text-decoration: none;
-        color: white;
+        color: rgb(7, 7, 7);
         font-size: 20px;
         font-weight: bolder;
    }
    .nav a:hover{
-        color: rgb(255, 0, 157);
+        color: rgb(255, 0, 0);
    }
 }
