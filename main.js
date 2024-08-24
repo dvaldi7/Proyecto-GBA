@@ -1,3 +1,5 @@
+/* RESPONSIVE NAV BUTTON */
+
 const myButton = document.querySelector(".button");
 const myNav = document.querySelector(".nav");
 
