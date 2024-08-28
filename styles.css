@@ -108,24 +108,43 @@
     color: rgb(255, 255, 255);
     text-align: center;
     text-shadow: 0px 0px 5px red, 0px 0px 5px red;
-    
+    animation: introduction-GB 1s linear both
 }
+
+@keyframes introduction-GB{
+    0%{
+        letter-spacing: .6em;
+        opacity: 0;
+    }
+    40%{
+        opacity: .6;
+    }
+    100%{
+        letter-spacing: normal;
+        opacity: 1;
+    }
+}
+
     
 .banner h1{
     padding: 30px 30px;
     height: 100px;     
 }
 
+
+/* SLIDER */
+
 .slider{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 100%;
     color: black;
     background-color: green;
     margin-top: 100px; 
     text-align: center;
     height: 100px;
     border: 3px solid red;
+
 }
 
