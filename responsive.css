@@ -11,7 +11,18 @@
    .banner{
         margin: 0px auto;
         padding: auto;
+        animation:introduction-GB 1s linear both
    }
+
+    @keyframes introduction-GB{
+    0%{
+        letter-spacing: .2em;
+        transform:translateZ(-500px) translateY(-100px);
+        opacity:0}
+    40%{opacity:.6}
+    100%{
+        transform:translateZ(0) translateY(0);
+        opacity:1}}
    
    .banner h1{
         font-size: 30px;
@@ -75,3 +86,4 @@
         color: rgb(255, 0, 0);
    }
 }
+
