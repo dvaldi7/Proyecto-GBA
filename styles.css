@@ -170,8 +170,8 @@
 }
   
 .slider-item img {
-    width: 60%;
-    display: flex;
+    width: 65%;
+
 }
 
 /* Navegación de la galería */
@@ -179,7 +179,7 @@
 .slider-navigation {
     display: flex;
     justify-content: space-between;
-    width: calc(70% - 40px);
+    width: calc(65% - 40px);
     margin: 0 20px;
     position: absolute;
     top: 50%;
