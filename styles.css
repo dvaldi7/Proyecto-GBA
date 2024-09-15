@@ -170,7 +170,8 @@
 }
   
 .slider-item img {
-    width: 65%;
+    width: 80%;
+    margin-left: 100px;
 
 }
 
@@ -179,7 +180,7 @@
 .slider-navigation {
     display: flex;
     justify-content: space-between;
-    width: calc(65% - 40px);
+    width: calc(80% - 40px);
     margin: 0 20px;
     position: absolute;
     top: 50%;
