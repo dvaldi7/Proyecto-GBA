@@ -165,8 +165,8 @@
     display: flex;
     justify-content: space-between;
     position: absolute;
-    width: 75%;
-    top: 80%;
+    top: 100%;
+    margin-left: 390px;
     transform: translateY(-50%);
    
 }
