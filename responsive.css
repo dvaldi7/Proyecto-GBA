@@ -39,7 +39,6 @@
         cursor: pointer;
         border: none;
         color: black;
-
    }
 
    #header .button:hover{
@@ -72,8 +71,7 @@
         display: flex;
         flex-flow: column wrap;
         list-style: none;
-        row-gap: 25px;
-        
+        row-gap: 25px; 
    }
 
    .nav a{
@@ -85,6 +83,5 @@
    .nav a:hover{
         color: rgb(255, 0, 0);
    }
-
+ 
 }
-
