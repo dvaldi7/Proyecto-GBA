@@ -290,3 +290,21 @@
     margin-left: 5%;
     margin-right: 5%;
  }
+
+ #footer p{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+ }
+ .rrss{
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: center;
+ }
+
+ .rrss-buttons a{
+    height: 20px;
+ }
