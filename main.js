@@ -53,4 +53,20 @@ document.querySelectorAll('.nav-button').forEach(button => {
     button.addEventListener('click', stopAutoplay);
 });
 
-// AGRANDAR IMAGEN HORARIOS
+/*// AGRANDAR IMAGEN HORARIOS
+
+const schedule = document.getElementById("image-schedule");
+
+schedule.addEventListener("click", scheduleBig);
+
+function scheduleBig(){
+    schedule.style.width = "150%";
+    schedule.style.height = "150%";
+    console.log("funciono");
+};*/
+
+//CAMBIAR HAMBURGUESA POR X
+
+const hamburguer = document.getElementById("button-list");
+
+hamburguer.addEventListener("click",);
