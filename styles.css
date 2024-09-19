@@ -240,6 +240,16 @@
     text-shadow: 0px 0px 5px red, 0px 0px 5px red;
 }
 
+#profesors img{
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, .8) );
+    mask-image: linear-gradient(black 80%, transparent);
+}
+
+#profesors img:hover{
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, .8) );
+}
+
 /* CONTACT */
 
 #footer{
@@ -305,6 +315,3 @@
    justify-content: center;
  }
 
- .rrss-buttons a{
-    height: 20px;
- }
