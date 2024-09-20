@@ -83,4 +83,49 @@
    .nav a:hover{
         color: rgb(255, 0, 0);
    }
+
+   /* FOOTER */
+   
+   .rrss{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+   }
+
+   #location{
+     width: 100%;
+     display: flex;
+     flex-wrap: wrap;
+     align-items: center;
+     justify-content: center;
+   }
+
+   div.rrss{
+     width: 100%;
+     margin-bottom: 60px;
+    
+   }
+
+   div.rrss img{
+     width: 60%;
+     
+   }
+
+   div#location{
+     width: 100%;
+     margin-bottom: 50px;
+   }
+
+   div#location iframe{
+     width: 80%;
+     height: 400px;
+     
+     
+   }
+
 }
+
+
