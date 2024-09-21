@@ -249,10 +249,20 @@
 }
 
 #profesors img{
-    max-height: 350px;
     width: auto;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, .8) );
     mask-image: linear-gradient(black 80%, transparent);
+}
+
+#profesors .demis{
+    height: 350px;
+    cursor: -webkit-zoom-in;
+}
+
+#profesors .vitor{
+    height: 435px;
+    margin-bottom: 76px;
+    cursor: -webkit-zoom-in;
 }
 
 #profesors img:hover{
