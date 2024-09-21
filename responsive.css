@@ -84,6 +84,47 @@
         color: rgb(255, 0, 0);
    }
 
+   /* PROFESOR */
+
+   #profesors .demis{
+     height: 350px;
+     cursor: pointer;
+     filter: grayscale(80%);
+     transition: filter .3s;
+ }
+ 
+ .profesor-data{
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     width: 100%;
+     color: white;
+     letter-spacing: 2px;
+     text-transform: uppercase;
+     text-shadow: 0px 0px 5px red, 0px 0px 5px red;
+     margin-left: 5px;
+     margin-top: 50px;
+     margin-bottom: -50px;
+     
+ }
+ 
+ .profesor-data ul{
+     margin-left: 30px;
+ }
+ 
+ .profesor-data li{
+     padding-bottom: 10px;
+ }
+ 
+ #profesors .vitor{
+     height: 435px;
+     margin-bottom: 20px;
+     cursor: pointer;
+     margin-left: -15px;
+     filter: grayscale(80%);
+     transition: filter .3s;
+ }
+
    /* FOOTER */
    
    .rrss{
