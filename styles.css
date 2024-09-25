@@ -233,8 +233,6 @@
 
 #profesors{
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-wrap: wrap;
     flex-direction: row;
 }
@@ -249,6 +247,7 @@
 }
 
 #profesors img{
+    display: flex;
     width: auto;
     filter: drop-shadow(0 0 10px rgba(0, 0, 0, .8) );
     mask-image: linear-gradient(black 80%, transparent);
@@ -261,6 +260,7 @@
     transition: filter .3s;
 }
 
+
 .profesor-data{
     display: flex;
     align-items: center;
@@ -270,8 +270,9 @@
     letter-spacing: 2px;
     text-transform: uppercase;
     text-shadow: 0px 0px 5px red, 0px 0px 5px red;
-    margin-left: 5px;
+    margin-left: 10px;
     margin-top: 50px;
+    
     
 }
 
@@ -284,7 +285,9 @@
 }
 
 #profesors .vitor{
-    height: 435px;
+    display: flex;
+    justify-content: center;
+    height: 400px;
     margin-bottom: 20px;
     cursor: pointer;
     margin-left: -15px;
