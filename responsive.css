@@ -135,8 +135,10 @@
    div#location iframe{
      width: 80%;
      height: 400px;
-     
-     
+   }
+
+   #footer h5{
+     margin-top: 20px;
    }
 
 }
