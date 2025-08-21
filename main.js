@@ -1,61 +1,105 @@
 /* RESPONSIVE NAV BUTTON */
+document.addEventListener("DOMContentLoaded", () => {
+  const myButton = document.querySelector(".button");
+  const myNav = document.querySelector(".nav");
 
-const myButton = document.querySelector(".button");
-const myNav = document.querySelector(".nav");
+  if (myButton && myNav) {
+    myButton.addEventListener("click", () => {
+      myNav.classList.toggle("activo");
+    });
+  }
 
-myButton.addEventListener("click", () => {
-    myNav.classList.toggle("activo");
-    
-});
+  /* CERRAR MENÚ AL HACER CLIC EN UN ENLACE */
+  const menuLinks = document.querySelectorAll('.nav a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (myNav && myNav.classList.contains('activo')) {
+        myNav.classList.remove('activo');
+      }
+    });
+  });
 
-/* SLIDER */ 
+  /* SLIDER */
+  const slider = document.getElementById("slider");
+  const galleryContainer = document.querySelector(".slider-container");
+  const slides = document.querySelectorAll(".slider-item");
+  const prevButton = document.querySelector(".prev-button");
+  const nextButton = document.querySelector(".next-button");
 
-let currentIndex = 0;
+  // Si no hay slider en esta página, salimos sin errores
+  if (!slider || !galleryContainer || slides.length === 0) return;
 
-document.querySelector('.prev-button').addEventListener('click', () => {
-    navigate(-1);
-});
+  let currentIndex = 0;
+  const totalImages = slides.length;
 
-document.querySelector('.next-button').addEventListener('click', () => {
-    navigate(1);
-});
-
-function navigate(direction) {
-    const galleryContainer = document.querySelector('.slider-container');
-    const totalImages = document.querySelectorAll('.slider-item').length;
-    
-    currentIndex = (currentIndex + direction + totalImages) % totalImages;
+  function updateSlide() {
     const offset = -currentIndex * 100;
-    
     galleryContainer.style.transform = `translateX(${offset}%)`;
-}
+    updateDots();
+  }
 
-//AUTOPLAY FOR SLIDER
+  function navigate(direction) {
+    currentIndex = (currentIndex + direction + totalImages) % totalImages;
+    updateSlide();
+  }
 
-let autoplayInterval = null;
+  // Botones
+  if (prevButton) prevButton.addEventListener("click", () => {
+    navigate(-1);
+    stopAutoplay();
+  });
+  if (nextButton) nextButton.addEventListener("click", () => {
+    navigate(1);
+    stopAutoplay();
+  });
 
-function startAutoplay(interval) {
-    stopAutoplay();  // Detiene cualquier autoplay anterior para evitar múltiples intervalos.
+  // Dots dinámicos
+  const dotsContainer = document.createElement("div");
+  dotsContainer.classList.add("slider-dots");
+  slider.appendChild(dotsContainer);
+
+  const dots = [];
+  for (let i = 0; i < totalImages; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("slider-dot");
+    if (i === 0) dot.classList.add("active");
+    dot.addEventListener("click", () => {
+      currentIndex = i;
+      updateSlide();
+      stopAutoplay();
+    });
+    dotsContainer.appendChild(dot);
+    dots.push(dot);
+  }
+
+  function updateDots() {
+    dots.forEach((dot, i) => {
+      dot.classList.toggle("active", i === currentIndex);
+    });
+  }
+
+  // Autoplay
+  let autoplayInterval = null;
+
+  function startAutoplay(interval = 5000) {
+    stopAutoplay();
     autoplayInterval = setInterval(() => {
-        navigate(1);  // Navega a la siguiente imagen cada intervalo de tiempo.
+      navigate(1);
     }, interval);
-}
+  }
 
-function stopAutoplay() {
-    clearInterval(autoplayInterval);
-}
+  function stopAutoplay() {
+    if (autoplayInterval) {
+      clearInterval(autoplayInterval);
+      autoplayInterval = null;
+    }
+  }
 
-// AUTOPLAY AFTER 3s
-startAutoplay(5000);
+  // Arrancar autoplay y pausar en hover
+  startAutoplay(5000);
+  slider.addEventListener("mouseenter", stopAutoplay);
+  slider.addEventListener("mouseleave", () => startAutoplay(5000));
 
-// Opcional: Detener autoplay cuando el usuario interactúa con los botones de navegación.
-document.querySelectorAll('.nav-button').forEach(button => {
-    button.addEventListener('click', stopAutoplay);
+  // Inicial
+  updateSlide();
 });
-
-
-//CAMBIAR HAMBURGUESA POR X
-
-/*const hamburguer = document.getElementById("button-list");
-
-hamburguer.addEventListener("click",);*/
