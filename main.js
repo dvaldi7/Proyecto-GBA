@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll(".slider-item");
   const prevButton = document.querySelector(".prev-button");
   const nextButton = document.querySelector(".next-button");
+  const video = document.getElementById('video');
 
   // Si no hay slider en esta página, salimos sin errores
   if (!slider || !galleryContainer || slides.length === 0) return;
@@ -78,28 +79,39 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Autoplay
-  let autoplayInterval = null;
+ // Autoplay
+let autoplayInterval = null;
+const intervalTime = 5000;
 
-  function startAutoplay(interval = 5000) {
+function startAutoplay() {
     stopAutoplay();
     autoplayInterval = setInterval(() => {
-      navigate(1);
-    }, interval);
-  }
+        navigate(1);
+    }, intervalTime);
+}
 
-  function stopAutoplay() {
+//  detener el autoplay
+function stopAutoplay() {
     if (autoplayInterval) {
-      clearInterval(autoplayInterval);
-      autoplayInterval = null;
+        clearInterval(autoplayInterval);
+        autoplayInterval = null;
     }
-  }
+}
 
-  // Arrancar autoplay y pausar en hover
-  startAutoplay(5000);
-  slider.addEventListener("mouseenter", stopAutoplay);
-  slider.addEventListener("mouseleave", () => startAutoplay(5000));
+// play del video para detener el slider.
+if (video) {
+    video.addEventListener('play', () => {
+        stopAutoplay();
+    });
 
-  // Inicial
-  updateSlide();
+    // pause para reanudarlo.
+    video.addEventListener('pause', () => {
+        startAutoplay();
+    });
+}
+
+startAutoplay();
+slider.addEventListener("mouseenter", stopAutoplay);
+slider.addEventListener("mouseleave", () => startAutoplay());
+updateSlide();
 });

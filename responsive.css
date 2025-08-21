@@ -115,9 +115,10 @@
      /* PROFESOR */
 
      div.profesor-data {
-          flex-wrap: wrap;
-          width: 100%;
-          font-size: 14px;
+        flex-wrap: wrap;
+        width: 80%; 
+        font-size: 14px;
+        margin: 10% 5%;
      }
 
      .profesor-data ul {
@@ -169,4 +170,5 @@
           margin-top: 20px;
      }
 
+   
 }
