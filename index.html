@@ -43,16 +43,21 @@
                 <span></span>
             </button>
         </div>
-        <nav id="nav-mobile" class="nav-mobile" aria-label="Navegación móvil">
-            <ul>
-                <li><a href="#hero">Inicio</a></li>
-                <li><a href="#programas">Programas</a></li>
-                <li><a href="#equipo">Equipo</a></li>
-                <li><a href="#horarios">Horarios</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
     </header>
+
+    <!-- NAV MOBILE (fuera del header para stacking context correcto) -->
+    <nav id="nav-mobile" class="nav-mobile" aria-label="Navegación móvil">
+        <button class="nav-mobile-close" aria-label="Cerrar menú">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <ul>
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#programas">Programas</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#horarios">Horarios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
 
     <main id="main">
         <!-- HERO SECTION -->
@@ -107,10 +112,10 @@
                             <p>Aprende la base del BJJ</p>
                         </div>
                     </article>
-                    <article class="programa-card">
-                        <img src="images/GB3.jpg" alt="Competición - Preparación para torneos" loading="lazy">
+                    <article id="programa-avanzados" class="programa-card">
+                        <img src="images/GB4.jpg" alt="Avanzados - Clases avanzadas de Jiu-Jitsu" loading="lazy">
                         <div class="programa-info">
-                            <h3>Competición</h3>
+                            <h3>Avanzados</h3>
                             <p>Jiu-Jitsu Avanzados</p>
                         </div>
                     </article>

@@ -571,6 +571,15 @@ img {
     color: var(--gb-white-80);
 }
 
+/* Card Avanzados: mismo aspect-ratio que las demás */
+#programa-avanzados {
+    background: var(--gb-black);
+}
+
+#programa-avanzados img {
+    object-position: top center;
+}
+
 /* --- EQUIPO SECTION --- */
 .equipo {
     background: var(--gb-black);
@@ -599,12 +608,14 @@ img {
 .equipo-image {
     position: relative;
     overflow: hidden;
+    min-height: 350px;
+    background: var(--gb-black-card);
 }
 
 .equipo-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     transition: transform var(--transition-slow);
 }
 
@@ -1014,12 +1025,22 @@ img {
         --space-section: 80px;
     }
 
+    /* Equipo: side-by-side 50/50, sin espacio vacío */
     .equipo-grid {
+        grid-template-columns: 1fr;
         gap: var(--space-md);
     }
 
     .equipo-card {
-        grid-template-columns: 250px 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .equipo-image {
+        min-height: 320px;
+    }
+
+    .equipo-image img {
+        object-fit: contain;
     }
 }
 
@@ -1038,11 +1059,20 @@ img {
         display: flex;
     }
 
+    .header .logo {
+        flex-shrink: 1;
+        min-width: 0;
+    }
+
     .header .logo img {
-        height: 50px;
+        height: 40px;
     }
 
     /* Hero */
+    .hero-scroll {
+        display: none;
+    }
+
     .hero-subtitle {
         margin-bottom: var(--space-md);
     }
@@ -1063,20 +1093,14 @@ img {
     }
 
     /* Equipo */
-    .equipo-grid {
-        grid-template-columns: 1fr;
-    }
-
     .equipo-card {
         grid-template-columns: 1fr;
     }
 
     .equipo-image {
-        height: 250px;
-    }
-
-    .equipo-image img {
-        object-position: top center;
+        aspect-ratio: 3 / 4;
+        max-width: 100%;
+        min-height: auto;
     }
 
     /* Horarios */
