@@ -377,8 +377,9 @@ img {
     display: inline-block;
     font-family: var(--font-display);
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 50px;
     letter-spacing: 4px;
+    margin-top: 25px;
     text-transform: uppercase;
     color: var(--gb-red);
     margin-bottom: var(--space-sm);
@@ -754,6 +755,75 @@ img {
     color: var(--gb-white);
 }
 
+/* --- HORARIOS MOBILE: DAY TABS --- */
+.horarios-mobile {
+    display: none;
+}
+
+.horarios-tabs {
+    display: flex;
+    gap: 4px;
+    margin-bottom: var(--space-md);
+}
+
+.horarios-tab {
+    flex: 1;
+    padding: 10px 0;
+    background: var(--gb-black-card);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-md);
+    color: var(--gb-white-60);
+    font-family: var(--font-display);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.horarios-tab:hover {
+    color: var(--gb-white);
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.horarios-tab.active {
+    background: var(--gb-red);
+    border-color: var(--gb-red);
+    color: var(--gb-white);
+}
+
+.horarios-card {
+    background: var(--gb-black-card);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.horarios-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.horarios-card-time {
+    font-family: var(--font-display);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--gb-white);
+}
+
+.horarios-card-class {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--gb-red);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: var(--font-display);
+}
+
 /* --- CONTACTO SECTION --- */
 .contacto {
     background: var(--gb-black);
@@ -767,77 +837,105 @@ img {
 }
 
 .contacto-card {
+    position: relative;
     background: var(--gb-black-card);
     border-radius: var(--radius-lg);
     padding: var(--space-lg);
     text-align: center;
-    transition: var(--transition-smooth);
-    border: 1px solid transparent;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .contacto-card:hover {
-    border-color: var(--gb-red);
-    transform: translateY(-4px);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(238, 12, 12, 0.12), 0 8px 16px rgba(0, 0, 0, 0.4);
+    border-color: rgba(238, 12, 12, 0.3);
+}
+
+.contacto-label {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gb-red);
+    margin-bottom: var(--space-xs);
 }
 
 .contacto-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     background: rgba(238, 12, 12, 0.1);
     border-radius: var(--radius-full);
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-sm);
+    transition: var(--transition-smooth);
+}
+
+.contacto-card:hover .contacto-icon {
+    background: rgba(238, 12, 12, 0.2);
 }
 
 .contacto-icon svg {
     color: var(--gb-red);
 }
 
-.contacto-card h3 {
+/* --- PHONE CARD --- */
+.contacto-card--phone {
+    padding: var(--space-lg) var(--space-md);
+    gap: 4px;
+}
+
+.contacto-card--phone .contacto-phone {
     font-family: var(--font-display);
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 700;
+    letter-spacing: -1px;
     color: var(--gb-white);
-    margin-bottom: var(--space-sm);
+    text-decoration: none;
+    line-height: 1.1;
+    transition: color var(--transition-smooth);
 }
 
-.contacto-card a,
-.contacto-card p {
-    color: var(--gb-white-80);
-    font-size: 14px;
-    line-height: 1.8;
-}
-
-.contacto-card a:hover {
+.contacto-card--phone:hover .contacto-phone {
     color: var(--gb-red);
 }
 
-.contacto-phone {
-    font-family: var(--font-display);
-    font-size: 24px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    color: var(--gb-white) !important;
-    text-decoration: none;
-    display: block;
-    margin: 8px 0;
-}
-
 .phone-icon {
-    animation: pulse 2s infinite;
+    animation: phonePulse 2s infinite;
+    position: relative;
 }
 
-@keyframes pulse {
+.phone-icon::after {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: var(--radius-full);
+    border: 2px solid rgba(238, 12, 12, 0.3);
+    animation: phoneRing 2s infinite;
+}
+
+@keyframes phoneRing {
+    0%, 100% { transform: scale(1); opacity: 0.6; }
+    50% { transform: scale(1.2); opacity: 0; }
+}
+
+@keyframes phonePulse {
     0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
+    50% { transform: scale(1.05); }
 }
 
 .contacto-cta {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
     font-family: var(--font-display);
     font-size: 12px;
     font-weight: 500;
@@ -845,11 +943,36 @@ img {
     text-transform: uppercase;
     color: var(--gb-red);
     margin-top: 8px;
+    transition: gap var(--transition-smooth);
+}
+
+.contacto-cta::after {
+    content: '\2192';
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: opacity var(--transition-smooth), transform var(--transition-smooth);
+}
+
+.contacto-card:hover .contacto-cta::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contacto-card:hover .contacto-cta {
+    gap: 10px;
+}
+
+/* --- ADDRESS CARD --- */
+.contacto-card--address .contacto-icon {
+    width: 72px;
+    height: 72px;
 }
 
 .contacto-address {
-    line-height: 2 !important;
-    margin-bottom: 12px;
+    font-size: 14px;
+    color: var(--gb-white-80);
+    line-height: 1.8;
+    margin-bottom: var(--space-sm);
 }
 
 .contacto-map-link {
@@ -859,68 +982,78 @@ img {
     font-weight: 500;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--gb-red) !important;
+    color: var(--gb-white);
     text-decoration: none;
-    padding: 8px 16px;
-    border: 1px solid var(--gb-red);
+    padding: 8px 20px;
+    background: var(--gb-red);
     border-radius: var(--radius-full);
     transition: var(--transition-smooth);
+    margin-top: 4px;
 }
 
 .contacto-map-link:hover {
-    background: var(--gb-red);
-    color: var(--gb-white) !important;
+    background: var(--gb-red-dark);
+    transform: scale(1.05);
+}
+
+/* --- SOCIAL CARD --- */
+.contacto-card--social {
+    gap: var(--space-md);
 }
 
 .contacto-social {
     display: flex;
-    justify-content: center;
-    gap: var(--space-md);
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: var(--space-sm);
+    width: 100%;
 }
 
 .social-link {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    gap: 8px;
-    padding: 16px 24px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 20px;
     border-radius: var(--radius-lg);
-    transition: var(--transition-smooth);
     text-decoration: none;
-    min-width: 100px;
-}
-
-.social-link:hover {
-    background: var(--gb-red);
-    border-color: var(--gb-red);
-    transform: translateY(-4px);
-    box-shadow: 0 10px 30px rgba(238, 12, 12, 0.3);
-}
-
-.social-link svg {
-    color: var(--gb-white);
-    transition: var(--transition-smooth);
-}
-
-.social-link:hover svg {
-    transform: scale(1.1);
-}
-
-.social-label {
     font-family: var(--font-display);
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--gb-white-60);
     transition: var(--transition-smooth);
 }
 
-.social-link:hover .social-label {
-    color: var(--gb-white);
+.social-link svg {
+    flex-shrink: 0;
+}
+
+.social-link--fb {
+    background: rgba(24, 119, 242, 0.15);
+    color: #1877F2;
+    border: 1px solid rgba(24, 119, 242, 0.2);
+}
+
+.social-link--fb:hover {
+    background: #1877F2;
+    color: #fff;
+    border-color: #1877F2;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(24, 119, 242, 0.3);
+}
+
+.social-link--ig {
+    background: linear-gradient(135deg, rgba(131, 58, 180, 0.15), rgba(253, 29, 29, 0.15));
+    color: #E1306C;
+    border: 1px solid rgba(225, 48, 108, 0.2);
+}
+
+.social-link--ig:hover {
+    background: linear-gradient(135deg, #833AB4, #FD1D1D);
+    color: #fff;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(225, 48, 108, 0.3);
 }
 
 .contacto-map {
@@ -1068,6 +1201,14 @@ img {
         height: 40px;
     }
 
+    .header {
+        padding: 10px 0;
+    }
+
+    .header.scrolled {
+        padding: 8px 0;
+    }
+
     /* Hero */
     .hero-scroll {
         display: none;
@@ -1092,25 +1233,53 @@ img {
         background: linear-gradient(to top, rgba(10, 10, 10, 0.9), transparent 80%);
     }
 
-    /* Equipo */
+    /* Equipo: compacto side-by-side para mobile */
     .equipo-card {
-        grid-template-columns: 1fr;
+        grid-template-columns: 120px 1fr;
+        align-items: center;
     }
 
     .equipo-image {
-        aspect-ratio: 3 / 4;
-        max-width: 100%;
+        width: 120px;
+        height: 140px;
+        aspect-ratio: auto;
+        max-width: none;
         min-height: auto;
+        border-radius: var(--radius-md);
+        flex-shrink: 0;
     }
 
-    /* Horarios */
-    .horarios-table {
+    .equipo-image img {
+        object-fit: contain;
+        object-position: top center;
+    }
+
+    .equipo-info {
+        padding: var(--space-sm) var(--space-md);
+    }
+
+    .equipo-info h3 {
+        font-size: 18px;
+    }
+
+    .equipo-belt {
+        margin-bottom: 6px;
+        padding-bottom: 6px;
+    }
+
+    .equipo-logros li {
         font-size: 12px;
+        margin-bottom: 4px;
+        padding-left: 14px;
     }
 
-    .horarios-table th,
-    .horarios-table td {
-        padding: 12px 8px;
+    /* Horarios: mostrar day-tabs, ocultar tabla */
+    .horarios-table {
+        display: none;
+    }
+
+    .horarios-mobile {
+        display: block;
     }
 
     /* Contacto */
@@ -1126,14 +1295,6 @@ img {
 
     .title-main {
         font-size: 32px;
-    }
-
-    .equipo-info {
-        padding: var(--space-md);
-    }
-
-    .equipo-info h3 {
-        font-size: 22px;
     }
 
     .contacto-card {

@@ -149,6 +149,93 @@ document.addEventListener('DOMContentLoaded', () => {
             heroVideo.style.display = 'none';
         });
     }
+
+    // ========================================
+    // MOBILE SCHEDULE: DAY TABS
+    // ========================================
+    const horariosMobile = document.getElementById('horarios-mobile');
+    const horariosCards = document.getElementById('horarios-cards');
+    const horariosTabs = document.querySelectorAll('.horarios-tab');
+
+    if (horariosMobile && horariosCards && horariosTabs.length) {
+        const schedule = [
+            { day: 'Lunes', classes: [
+                { time: '08:00 - 09:00', name: 'Mañanas' },
+                { time: '09:30 - 10:30', name: 'No-Gi' },
+                { time: '10:30 - 12:00', name: 'GB2' },
+                { time: '16:00 - 17:00', name: 'Kids' },
+                { time: '17:30 - 18:30', name: 'Juniors' },
+                { time: '19:00 - 20:30', name: 'GB2' },
+                { time: '20:30 - 22:00', name: 'GB1' }
+            ]},
+            { day: 'Martes', classes: [
+                { time: '08:00 - 09:00', name: 'Mañanas' },
+                { time: '09:30 - 10:30', name: 'No-Gi' },
+                { time: '10:30 - 12:00', name: 'GB2' },
+                { time: '15:00 - 16:00', name: 'GB1' },
+                { time: '16:00 - 17:00', name: 'Kids' },
+                { time: '17:30 - 18:30', name: 'Little Ch.' },
+                { time: '19:00 - 20:30', name: 'No-Gi' },
+                { time: '20:30 - 22:00', name: 'GB1' }
+            ]},
+            { day: 'Miércoles', classes: [
+                { time: '08:00 - 09:00', name: 'Mañanas' },
+                { time: '09:30 - 10:30', name: 'No-Gi' },
+                { time: '10:30 - 12:00', name: 'GB2' },
+                { time: '16:00 - 17:00', name: 'Kids' },
+                { time: '17:30 - 18:30', name: 'Juniors' },
+                { time: '19:00 - 20:30', name: 'GB2' },
+                { time: '20:30 - 22:00', name: 'GB1' }
+            ]},
+            { day: 'Jueves', classes: [
+                { time: '08:00 - 09:00', name: 'Mañanas' },
+                { time: '09:30 - 10:30', name: 'No-Gi' },
+                { time: '10:30 - 12:00', name: 'GB2' },
+                { time: '15:00 - 16:00', name: 'GB1' },
+                { time: '16:00 - 17:00', name: 'Kids' },
+                { time: '17:30 - 18:30', name: 'Little Ch.' },
+                { time: '19:00 - 20:30', name: 'No-Gi' },
+                { time: '20:30 - 22:00', name: 'GB1' }
+            ]},
+            { day: 'Viernes', classes: [
+                { time: '08:00 - 09:00', name: 'Mañanas' },
+                { time: '10:30 - 12:00', name: 'ALL LEVELS', highlight: true },
+                { time: '16:00 - 17:00', name: 'Kids' },
+                { time: '19:00 - 20:30', name: 'ALL LEVELS', highlight: true }
+            ]},
+            { day: 'Sábado', classes: [
+                { time: '08:00 - 09:00', name: 'Open Mat', highlight: true },
+                { time: '10:00 - 14:00', name: 'Clases', highlight: true },
+                { time: '10:00 - 12:00', name: 'Clases', highlight: true }
+            ]}
+        ];
+
+        function renderDay(dayIndex) {
+            const day = schedule[dayIndex];
+            horariosCards.innerHTML = day.classes.map(cls =>
+                `<div class="horarios-card">
+                    <div class="horarios-card-header">
+                        <span class="horarios-card-time">${cls.time}</span>
+                        <span class="horarios-card-class"${cls.highlight ? ' style="color:var(--gb-red)"' : ''}>${cls.name}</span>
+                    </div>
+                </div>`
+            ).join('');
+        }
+
+        horariosTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                horariosTabs.forEach(t => {
+                    t.classList.remove('active');
+                    t.setAttribute('aria-selected', 'false');
+                });
+                tab.classList.add('active');
+                tab.setAttribute('aria-selected', 'true');
+                renderDay(parseInt(tab.dataset.day));
+            });
+        });
+
+        renderDay(0);
+    }
 });
 
 // ========================================

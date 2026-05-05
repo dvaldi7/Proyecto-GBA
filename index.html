@@ -196,41 +196,81 @@
                                 <td class="highlight">Open Mat</td>
                             </tr>
                             <tr>
+                                <td class="time">09:30 - 10:30</td>
+                                <td>No-Gi</td>
+                                <td>No-Gi</td>
+                                <td>No-Gi</td>
+                                <td>No-Gi</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td class="time">10:30 - 12:00</td>
+                                <td>GB2</td>
+                                <td>GB2</td>
+                                <td>GB2</td>
+                                <td>GB2</td>
+                                <td class="highlight">ALL LEVELS</td>
+                                <td class="highlight">Clases<br>10:00-14:00</td>
+                            </tr>
+                            <tr>
+                                <td class="time">15:00 - 16:00</td>
+                                <td>&mdash;</td>
+                                <td>GB1</td>
+                                <td>&mdash;</td>
+                                <td>GB1</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
                                 <td class="time">16:00 - 17:00</td>
                                 <td>Kids</td>
                                 <td>Kids</td>
                                 <td>Kids</td>
                                 <td>Kids</td>
                                 <td>Kids</td>
-                                <td rowspan="3" class="highlight">Clases<br>10:00-14:00</td>
+                                <td>&mdash;</td>
                             </tr>
                             <tr>
-                                <td class="time">17:00 - 18:30</td>
-                                <td>Kids+</td>
-                                <td>Kids+</td>
-                                <td>Kids+</td>
-                                <td>Kids+</td>
-                                <td>Kids+</td>
+                                <td class="time">17:30 - 18:30</td>
+                                <td>Juniors</td>
+                                <td>Little Ch.</td>
+                                <td>Juniors</td>
+                                <td>Little Ch.</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
                             </tr>
                             <tr>
-                                <td class="time">18:30 - 20:00</td>
-                                <td>Adultos</td>
-                                <td>Adultos</td>
-                                <td>Adultos</td>
-                                <td>Adultos</td>
-                                <td>Adultos</td>
-                            </tr>
-                            <tr>
-                                <td class="time">20:00 - 21:30</td>
-                                <td>Avanzados</td>
+                                <td class="time">19:00 - 20:30</td>
+                                <td>GB2</td>
                                 <td>No-Gi</td>
-                                <td>Avanzados</td>
+                                <td>GB2</td>
                                 <td>No-Gi</td>
-                                <td>Sparring</td>
+                                <td class="highlight">ALL LEVELS</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td class="time">20:30 - 22:00</td>
+                                <td>GB1</td>
+                                <td>GB1</td>
+                                <td>GB1</td>
+                                <td>GB1</td>
+                                <td>&mdash;</td>
                                 <td class="highlight">10:00-12:00</td>
                             </tr>
                         </tbody>
                     </table>
+                    <div class="horarios-mobile" id="horarios-mobile" aria-hidden="true">
+                        <div class="horarios-tabs" role="tablist" aria-label="Días de la semana">
+                            <button class="horarios-tab active" role="tab" data-day="0" aria-selected="true">L</button>
+                            <button class="horarios-tab" role="tab" data-day="1" aria-selected="false">M</button>
+                            <button class="horarios-tab" role="tab" data-day="2" aria-selected="false">X</button>
+                            <button class="horarios-tab" role="tab" data-day="3" aria-selected="false">J</button>
+                            <button class="horarios-tab" role="tab" data-day="4" aria-selected="false">V</button>
+                            <button class="horarios-tab" role="tab" data-day="5" aria-selected="false">S</button>
+                        </div>
+                        <div class="horarios-cards" id="horarios-cards"></div>
+                    </div>
                     <p class="horarios-cta">Primera clase gratuita. ¡Ven y prueba sin compromiso!</p>
                 </div>
             </div>
@@ -244,31 +284,37 @@
                     <span class="title-main">Contacto</span>
                 </h2>
                 <div class="contacto-grid">
-                    <div class="contacto-card">
-                        <div class="contacto-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    <!-- PHONE CARD -->
+                    <div class="contacto-card contacto-card--phone">
+                        <div class="contacto-icon phone-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                         </div>
-                        <h3>Teléfono</h3>
-                        <a href="tel:+34693906771">693 90 67 71</a>
+                        <span class="contacto-label">Teléfono</span>
+                        <a href="tel:+34693906771" class="contacto-phone">693 90 67 71</a>
+                        <span class="contacto-cta">Llamar ahora</span>
                     </div>
-                    <div class="contacto-card">
-                        <div class="contacto-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+
+                    <!-- ADDRESS CARD -->
+                    <div class="contacto-card contacto-card--address">
+                        <div class="contacto-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                         </div>
-                        <h3>Dirección</h3>
-                        <p>C/ del Zinc, 3<br>03690 San Vicente del Raspeig<br>Alicante</p>
+                        <span class="contacto-label">Dirección</span>
+                        <p class="contacto-address">C/ del Zinc, 3<br>03690 San Vicente del Raspeig<br>Alicante</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Gracie+Barra+Alicante" target="_blank" rel="noopener" class="contacto-map-link">Cómo llegar</a>
                     </div>
-                    <div class="contacto-card">
-                        <div class="contacto-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a5 5 0 0 1 5-5z"></path></svg>
-                        </div>
-                        <h3>Redes</h3>
+
+                    <!-- SOCIAL CARD -->
+                    <div class="contacto-card contacto-card--social">
+                        <span class="contacto-label">Redes</span>
                         <div class="contacto-social">
-                            <a href="https://www.facebook.com/graciebarraalicante/?locale=es_ES" target="_blank" rel="noopener" aria-label="Facebook">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a5 5 0 0 1 5-5z"></path></svg>
+                            <a href="https://www.facebook.com/graciebarraalicante/?locale=es_ES" target="_blank" rel="noopener" class="social-link social-link--fb" aria-label="Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a5 5 0 0 1 5-5z"></path></svg>
+                                <span>Facebook</span>
                             </a>
-                            <a href="https://www.instagram.com/gracie_barra_alicante/?hl=es" target="_blank" rel="noopener" aria-label="Instagram">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                            <a href="https://www.instagram.com/gracie_barra_alicante/?hl=es" target="_blank" rel="noopener" class="social-link social-link--ig" aria-label="Instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                <span>Instagram</span>
                             </a>
                         </div>
                     </div>
@@ -283,7 +329,7 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Gracie Barra Alicante. Todos los derechos reservados.</p>
+            <p>&copy; <span id="current-year"></span> Gracie Barra Alicante. Todos los derechos reservados.</p>
             <p class="footer-dev">Desarrollado por <a href="#">davaldev</a></p>
         </div>
     </footer>
