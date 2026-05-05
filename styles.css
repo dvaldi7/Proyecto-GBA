@@ -220,6 +220,46 @@ img {
     transform: rotate(-45deg) translate(6px, -6px);
 }
 
+/* Mobile Nav Close Button */
+.nav-mobile-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 48px;
+    height: 48px;
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    transition: var(--transition-smooth);
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.nav-mobile.active .nav-mobile-close {
+    opacity: 1;
+    transform: scale(1);
+    transition-delay: 0.35s;
+}
+
+.nav-mobile-close svg {
+    color: var(--gb-red);
+    transition: var(--transition-fast);
+}
+
+.nav-mobile-close:hover {
+    background: var(--gb-red);
+    border-color: var(--gb-red);
+}
+
+.nav-mobile-close:hover svg {
+    color: var(--gb-white);
+}
+
 /* Mobile Nav */
 .nav-mobile {
     position: fixed;
@@ -634,10 +674,16 @@ img {
 .horarios-wrapper {
     max-width: 900px;
     margin: 0 auto;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gb-red) var(--gb-black-card);
 }
 
 .horarios-table {
     width: 100%;
+    min-width: 700px;
     border-collapse: collapse;
     background: var(--gb-black-card);
     border-radius: var(--radius-lg);
@@ -759,28 +805,110 @@ img {
     color: var(--gb-red);
 }
 
-.contacto-social {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-md);
+.contacto-phone {
+    font-family: var(--font-display);
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--gb-white) !important;
+    text-decoration: none;
+    display: block;
+    margin: 8px 0;
 }
 
-.contacto-social a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    background: rgba(255, 255, 255, 0.1);
+.phone-icon {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.contacto-cta {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gb-red);
+    margin-top: 8px;
+}
+
+.contacto-address {
+    line-height: 2 !important;
+    margin-bottom: 12px;
+}
+
+.contacto-map-link {
+    display: inline-block;
+    font-family: var(--font-display);
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gb-red) !important;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid var(--gb-red);
     border-radius: var(--radius-full);
     transition: var(--transition-smooth);
 }
 
-.contacto-social a:hover {
+.contacto-map-link:hover {
     background: var(--gb-red);
+    color: var(--gb-white) !important;
 }
 
-.contacto-social svg {
+.contacto-social {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+}
+
+.social-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 16px 24px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-lg);
+    transition: var(--transition-smooth);
+    text-decoration: none;
+    min-width: 100px;
+}
+
+.social-link:hover {
+    background: var(--gb-red);
+    border-color: var(--gb-red);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(238, 12, 12, 0.3);
+}
+
+.social-link svg {
+    color: var(--gb-white);
+    transition: var(--transition-smooth);
+}
+
+.social-link:hover svg {
+    transform: scale(1.1);
+}
+
+.social-label {
+    font-family: var(--font-display);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--gb-white-60);
+    transition: var(--transition-smooth);
+}
+
+.social-link:hover .social-label {
     color: var(--gb-white);
 }
 
@@ -945,6 +1073,10 @@ img {
 
     .equipo-image {
         height: 250px;
+    }
+
+    .equipo-image img {
+        object-position: top center;
     }
 
     /* Horarios */

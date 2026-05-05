@@ -1,5 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ========================================
+    // DYNAMIC YEAR IN FOOTER
+    // ========================================
+    const currentYearElement = document.getElementById('current-year');
+    if (currentYearElement) {
+        currentYearElement.textContent = new Date().getFullYear();
+    }
+    // ========================================
     // HEADER SCROLL EFFECT
     // ========================================
     const header = document.getElementById('header');
@@ -23,6 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navMobile = document.getElementById('nav-mobile');
     const navMobileLinks = document.querySelectorAll('.nav-mobile a');
+    const navMobileClose = document.querySelector('.nav-mobile-close');
+
+    const closeMenu = () => {
+        menuToggle.classList.remove('active');
+        navMobile.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+    };
 
     if (menuToggle && navMobile) {
         menuToggle.addEventListener('click', () => {
@@ -35,21 +50,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Close menu on link click
         navMobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
-                navMobile.classList.remove('active');
-                menuToggle.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
-            });
+            link.addEventListener('click', closeMenu);
         });
+
+        // Close menu on X button click
+        if (navMobileClose) {
+            navMobileClose.addEventListener('click', closeMenu);
+        }
 
         // Close on escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && navMobile.classList.contains('active')) {
-                menuToggle.classList.remove('active');
-                navMobile.classList.remove('active');
-                menuToggle.setAttribute('aria-expanded', 'false');
-                document.body.style.overflow = '';
+                closeMenu();
             }
         });
     }
@@ -116,7 +128,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (target) {
                 const headerHeight = header ? header.offsetHeight : 0;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                const extraOffset = 20;
+                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - extraOffset;
 
                 window.scrollTo({
                     top: targetPosition,
