@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gracie Barra Alicante - Brazilian Jiu-Jitsu en Alicante</title>
+    <meta name="description" content="Academia de Brazilian Jiu-Jitsu en Alicante. Clases para niños, adultos y familias. Instructors profesionales con primera clase gratuita.">
+    <meta name="keywords" content="Jiu-Jitsu, Brazilian Jiu-Jitsu, BJJ Alicante, artes marciales, autocdefensa">
+    <meta name="author" content="Gracie Barra Alicante">
+    <meta property="og:title" content="Gracie Barra Alicante - Brazilian Jiu-Jitsu">
+    <meta property="og:description" content="Academia de BJJ en Alicante. Primera clase gratuita.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="images/GBA-logo.png" sizes="32x32">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <a href="#main" class="skip-link">Saltar al contenido</a>
+
+    <!-- HEADER -->
+    <header id="header" class="header">
+        <div class="header-container">
+            <a href="#" class="logo" aria-label="Gracie Barra Alicante">
+                <img src="images/gracie barra alicante logo.jpg" alt="Gracie Barra Alicante">
+            </a>
+            <nav class="nav-desktop" aria-label="Navegación principal">
+                <ul>
+                    <li><a href="#hero">Inicio</a></li>
+                    <li><a href="#programas">Programas</a></li>
+                    <li><a href="#equipo">Equipo</a></li>
+                    <li><a href="#horarios">Horarios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Menú" aria-expanded="false" aria-controls="nav-mobile">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- NAV MOBILE (fuera del header para stacking context correcto) -->
+    <nav id="nav-mobile" class="nav-mobile" aria-label="Navegación móvil">
+        <button class="nav-mobile-close" aria-label="Cerrar menú">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+        <ul>
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#programas">Programas</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+            <li><a href="#horarios">Horarios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main id="main">
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero">
+            <div class="hero-video-container">
+                <video class="hero-video" autoplay muted loop playsinline poster="images/GBA-logo.png">
+                    <source src="video/GBVideo.mp4" type="video/mp4">
+                </video>
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="hero-content">
+                <span class="hero-tag">Gracie Barra Alicante</span>
+                <h1 class="hero-title">Brazilian Jiu-Jitsu</h1>
+                <p class="hero-subtitle">Donde la transformación comienza</p>
+                <a href="#contacto" class="hero-cta">
+                    <span>Primera clase gratuita</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                </a>
+            </div>
+            <div class="hero-scroll">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- PROGRAMAS SECTION -->
+        <section id="programas" class="section programas">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-accent">Nuestros</span>
+                    <span class="title-main">Programas</span>
+                </h2>
+                <div class="programas-grid">
+                    <article class="programa-card">
+                        <img src="images/GBKids.jpg" alt="GB Kids - Jiu-Jitsu para niños" loading="lazy">
+                        <div class="programa-info">
+                            <h3>GB Kids</h3>
+                            <p>Niños de 4 a 14 años</p>
+                        </div>
+                    </article>
+                    <article class="programa-card">
+                        <img src="images/GBGirls.jpg" alt="GB Girls - Jiu-Jitsu para mujeres" loading="lazy">
+                        <div class="programa-info">
+                            <h3>GB Girls</h3>
+                            <p>Mujeres - Defensa Personal</p>
+                        </div>
+                    </article>
+                    <article class="programa-card">
+                        <img src="images/GB2.jpg" alt="Fundamentos - Clases de Jiu-Jitsu" loading="lazy">
+                        <div class="programa-info">
+                            <h3>Fundamentos</h3>
+                            <p>Aprende la base del BJJ</p>
+                        </div>
+                    </article>
+                    <article id="programa-avanzados" class="programa-card">
+                        <img src="images/GB4.jpg" alt="Avanzados - Clases avanzadas de Jiu-Jitsu" loading="lazy">
+                        <div class="programa-info">
+                            <h3>Avanzados</h3>
+                            <p>Jiu-Jitsu Avanzados</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- EQUIPO SECTION -->
+        <section id="equipo" class="section equipo">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-accent">Nuestro</span>
+                    <span class="title-main">Equipo</span>
+                </h2>
+                <div class="equipo-grid">
+                    <article class="equipo-card">
+                        <div class="equipo-image">
+                            <img src="images/Demis_Malloy-removebg-preview.png" alt="Profesor Demis Malloy" loading="lazy">
+                        </div>
+                        <div class="equipo-info">
+                            <h3>Demis Malloy Tenorio</h3>
+                            <span class="equipo-role">Head Coach</span>
+                            <p class="equipo-belt">Cinturón negro 3er grado</p>
+                            <ul class="equipo-logros">
+                                <li>Campeón Copa de Europa FIJJD</li>
+                                <li>Campeón de España</li>
+                                <li>Head Coach GB Jessheim (Noruega)</li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article class="equipo-card">
+                        <div class="equipo-image">
+                            <img src="images/VPenteado-removebg-preview.png" alt="Profesor Vitor Penteado" loading="lazy">
+                        </div>
+                        <div class="equipo-info">
+                            <h3>Vitor Penteado Borges</h3>
+                            <span class="equipo-role">Head Coach</span>
+                            <p class="equipo-belt">Cinturón negro 2º grado</p>
+                            <ul class="equipo-logros">
+                                <li>Bicampeón nacional Portugal</li>
+                                <li>Campeón Europa Gi & No-Gi 2023</li>
+                                <li>Campeón Copa Madrid 2023</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- HORARIOS SECTION -->
+        <section id="horarios" class="section horarios">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-accent">Nuestros</span>
+                    <span class="title-main">Horarios</span>
+                </h2>
+                <div class="horarios-wrapper">
+                    <table class="horarios-table" summary="Horario de clases de Gracie Barra Alicante">
+                        <thead>
+                            <tr>
+                                <th>Horario</th>
+                                <th>Lunes</th>
+                                <th>Martes</th>
+                                <th>Miércoles</th>
+                                <th>Jueves</th>
+                                <th>Viernes</th>
+                                <th>Sábado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time">08:00 - 09:00</td>
+                                <td>Mañanas</td>
+                                <td>Mañanas</td>
+                                <td>Mañanas</td>
+                                <td>Mañanas</td>
+                                <td>Mañanas</td>
+                                <td class="highlight">Open Mat</td>
+                            </tr>
+                            <tr>
+                                <td class="time">09:30 - 10:30</td>
+                                <td>No-Gi</td>
+                                <td>No-Gi</td>
+                                <td>No-Gi</td>
+                                <td>No-Gi</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td class="time">10:30 - 12:00</td>
+                                <td>GB2</td>
+                                <td>GB2</td>
+                                <td>GB2</td>
+                                <td>GB2</td>
+                                <td class="highlight">ALL LEVELS</td>
+                                <td class="highlight">Clases<br>10:00-14:00</td>
+                            </tr>
+                            <tr>
+                                <td class="time">15:00 - 16:00</td>
+                                <td>&mdash;</td>
+                                <td>GB1</td>
+                                <td>&mdash;</td>
+                                <td>GB1</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td class="time">16:00 - 17:00</td>
+                                <td>Kids</td>
+                                <td>Kids</td>
+                                <td>Kids</td>
+                                <td>Kids</td>
+                                <td>Kids</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td class="time">17:30 - 18:30</td>
+                                <td>Juniors</td>
+                                <td>Little Ch.</td>
+                                <td>Juniors</td>
+                                <td>Little Ch.</td>
+                                <td>&mdash;</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td class="time">19:00 - 20:30</td>
+                                <td>GB2</td>
+                                <td>No-Gi</td>
+                                <td>GB2</td>
+                                <td>No-Gi</td>
+                                <td class="highlight">ALL LEVELS</td>
+                                <td>&mdash;</td>
+                            </tr>
+                            <tr>
+                                <td class="time">20:30 - 22:00</td>
+                                <td>GB1</td>
+                                <td>GB1</td>
+                                <td>GB1</td>
+                                <td>GB1</td>
+                                <td>&mdash;</td>
+                                <td class="highlight">10:00-12:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="horarios-mobile" id="horarios-mobile" aria-hidden="true">
+                        <div class="horarios-tabs" role="tablist" aria-label="Días de la semana">
+                            <button class="horarios-tab active" role="tab" data-day="0" aria-selected="true">L</button>
+                            <button class="horarios-tab" role="tab" data-day="1" aria-selected="false">M</button>
+                            <button class="horarios-tab" role="tab" data-day="2" aria-selected="false">X</button>
+                            <button class="horarios-tab" role="tab" data-day="3" aria-selected="false">J</button>
+                            <button class="horarios-tab" role="tab" data-day="4" aria-selected="false">V</button>
+                            <button class="horarios-tab" role="tab" data-day="5" aria-selected="false">S</button>
+                        </div>
+                        <div class="horarios-cards" id="horarios-cards"></div>
+                    </div>
+                    <p class="horarios-cta">Primera clase gratuita. ¡Ven y prueba sin compromiso!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACTO SECTION -->
+        <section id="contacto" class="section contacto">
+            <div class="container">
+                <h2 class="section-title">
+                    <span class="title-accent">Escríbenos</span>
+                    <span class="title-main">Contacto</span>
+                </h2>
+                <div class="contacto-grid">
+                    <!-- PHONE CARD -->
+                    <div class="contacto-card contacto-card--phone">
+                        <div class="contacto-icon phone-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        </div>
+                        <span class="contacto-label">Teléfono</span>
+                        <a href="tel:+34693906771" class="contacto-phone">693 90 67 71</a>
+                        <span class="contacto-cta">Llamar ahora</span>
+                    </div>
+
+                    <!-- ADDRESS CARD -->
+                    <div class="contacto-card contacto-card--address">
+                        <div class="contacto-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <span class="contacto-label">Dirección</span>
+                        <p class="contacto-address">C/ del Zinc, 3<br>03690 San Vicente del Raspeig<br>Alicante</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Gracie+Barra+Alicante" target="_blank" rel="noopener" class="contacto-map-link">Cómo llegar</a>
+                    </div>
+
+                    <!-- SOCIAL CARD -->
+                    <div class="contacto-card contacto-card--social">
+                        <span class="contacto-label">Redes</span>
+                        <div class="contacto-social">
+                            <a href="https://www.facebook.com/graciebarraalicante/?locale=es_ES" target="_blank" rel="noopener" class="social-link social-link--fb" aria-label="Facebook">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a5 5 0 0 1 5-5z"></path></svg>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="https://www.instagram.com/gracie_barra_alicante/?hl=es" target="_blank" rel="noopener" class="social-link social-link--ig" aria-label="Instagram">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacto-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3127.250164455005!2d-0.5129724767753651!3d38.389464450923874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6236b0a93a18dd%3A0xc17cb6b9c640d0d!2sGracie%20Barra%20Alicante%20Brazilian%20Jiu-jitsu!5e0!3m2!1ses!2ses!4v1726696769400!5m2!1ses!2ses" width="600" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Ubicación en el mapa"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Gracie Barra Alicante. Todos los derechos reservados.</p>
+            <p class="footer-dev">Desarrollado por <a href="#">davaldev</a></p>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="back-to-top" aria-label="Volver arriba">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+    </button>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

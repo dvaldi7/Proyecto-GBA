@@ -1,0 +1,11 @@
+{
+  "name": "proyecto-gba",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "gh-pages -d . -b gh-pages -f"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}

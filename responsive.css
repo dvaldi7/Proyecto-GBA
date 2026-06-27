@@ -1,0 +1,235 @@
+/*
+ * =====================================================
+ * responsive.css - Primer diseño responsivo (mobile)
+ * =====================================================
+ * Este fue mi primer enfoque para hacer la página
+ * responsive para móviles. Aunque el diseño actual
+ * (styles.css) incluye todo el CSS responsivo de
+ * forma integrada, conservo este archivo como
+ * recuerdo de mis primeros pasos en el desarrollo
+ * web responsive.
+ *
+ * @author davaldev
+ * @since 2024 (primer diseño)
+ * @updated 2026 (diseño integrado en styles.css)
+ * =====================================================
+ */
+
+@media (max-width: 730px) {
+
+     #header {
+          height: 70px;
+          padding: 0 10px;
+     }
+
+     #header img {
+          margin-top: 11px;
+          height: 50px;
+          width: 50px;
+     }
+
+     #header .list {
+          display: none;
+     }
+
+     .banner {
+          margin: 0px auto;
+          padding: auto;
+          animation: introduction-GB 1s linear both;
+          height: 15vh;
+     }
+
+     @keyframes introduction-GB {
+          0% {
+               letter-spacing: .2em;
+               transform: translateZ(-500px) translateY(-100px);
+               opacity: 0
+          }
+
+          40% {
+               opacity: .6
+          }
+
+          100% {
+               transform: translateZ(0) translateY(0);
+               opacity: 1
+          }
+     }
+
+     .banner h1 {
+          font-size: 20px;
+          padding: 15px;
+     }
+
+     #slider {
+          height: 300px;
+          margin-top: 20px;
+     }
+
+     .slider-item img,
+     .video {
+          height: 300px;
+          object-fit: cover;
+     }
+
+     #header .button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          float: right;
+          margin-right: 10px;
+          width: 44px;
+          height: 44px;
+          min-height: 44px;
+          background-color: transparent;
+          cursor: pointer;
+          border: none;
+          color: black;
+          border-radius: 8px;
+     }
+
+     #header .button:hover,
+     #header .button:focus {
+          background-color: rgba(0, 0, 0, 0.1);
+          color: white;
+     }
+
+     #header .button-list {
+          width: 24px;
+          height: 24px;
+     }
+
+     #header .nav {
+          display: none;
+          flex-flow: column wrap;
+          position: absolute;
+          top: 70px;
+          left: 0;
+          right: 0;
+          width: 100%;
+          z-index: 20;
+          background-color: rgba(238, 12, 12, 0.95);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          padding: 20px 0;
+     }
+
+     #header .nav.activo {
+          display: flex;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+     }
+
+     .nav ul {
+          display: flex;
+          flex-flow: column wrap;
+          list-style: none;
+          row-gap: 0;
+          padding: 0;
+          margin: 0;
+     }
+
+     .nav li {
+          width: 100%;
+     }
+
+     .nav a {
+          display: block;
+          text-decoration: none;
+          font-size: 18px;
+          font-weight: 600;
+          color: #fff;
+          padding: 16px 24px;
+          text-align: center;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          transition: background-color 0.2s;
+     }
+
+     .nav a:hover,
+     .nav a:focus {
+          background-color: rgba(0, 0, 0, 0.2);
+          color: #fff;
+     }
+
+     /* PROFESOR */
+
+     div.profesor-data {
+        flex-wrap: wrap;
+        width: 100%;
+        font-size: 14px;
+        margin: 5% 0;
+        padding: 0 10px;
+     }
+
+     .profesor-data img {
+          width: 100%;
+          max-width: 200px;
+          height: auto;
+     }
+
+     .profesor-data ul {
+          margin-left: 0;
+          margin-top: 20px;
+          text-align: center;
+     }
+
+     .title-schedule,
+     .met-profesors,
+     .title-contact {
+          font-size: 28px;
+          margin: 50px 0 40px 0;
+     }
+
+     /* FOOTER */
+
+     .rrss {
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+     }
+
+     #location {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+     }
+
+     div.rrss {
+          width: 100%;
+          margin-bottom: 40px;
+     }
+
+     div.rrss img {
+          width: 50px;
+          height: 50px;
+     }
+
+     div.rrss-button {
+          justify-content: center;
+          gap: 20px;
+     }
+
+     div#location {
+          width: 100%;
+          margin-bottom: 40px;
+     }
+
+     div#location iframe {
+          width: 90%;
+          height: 300px;
+     }
+
+     #footer h5 {
+          margin-top: 20px;
+     }
+
+     .container-white {
+          font-size: 24px !important;
+          padding: 1rem !important;
+     }
+
+}
