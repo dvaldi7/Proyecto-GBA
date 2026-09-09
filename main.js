@@ -30,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.menu-toggle');
     const navMobile = document.getElementById('nav-mobile');
     const navMobileLinks = document.querySelectorAll('.nav-mobile a');
-    const navMobileClose = document.querySelector('.nav-mobile-close');
 
     const closeMenu = () => {
         menuToggle.classList.remove('active');
@@ -52,11 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
         navMobileLinks.forEach(link => {
             link.addEventListener('click', closeMenu);
         });
-
-        // Close menu on X button click
-        if (navMobileClose) {
-            navMobileClose.addEventListener('click', closeMenu);
-        }
 
         // Close on escape key
         document.addEventListener('keydown', (e) => {
